@@ -7,7 +7,7 @@
 //!
 //! ## Quick tour
 //!
-//! - [`Card`] / [`Deck`] / [`Note`] / [`Review`] — the domain types.
+//! - [`Card`] / [`Deck`] / [`Review`] — the domain types.
 //! - [`Store`] — the persistence abstraction (`fs`, in-memory, future: cloud).
 //! - [`Dictionary`] — the lookup abstraction (JMdict, custom, AI-backed).
 //! - [`Scheduler`] — spaced-repetition scheduler trait. The default
