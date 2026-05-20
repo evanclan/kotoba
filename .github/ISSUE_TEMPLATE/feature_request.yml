@@ -1,0 +1,55 @@
+name: 💡 Feature request
+description: Propose a new feature, command, integration, or surface.
+title: "feat: <short description>"
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Big features benefit from a discussion before implementation.
+        For substantial changes, please consider opening a [Discussion](../../../discussions) first.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the user pain or missing capability. Avoid jumping straight to a solution.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How would you solve it? What does the UX look like (CLI flags, files, etc.)?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Which crate(s) does this touch?
+      multiple: true
+      options:
+        - kotoba-core
+        - kotoba-cli
+        - kotoba-daemon
+        - kotoba-mcp
+        - shells/
+        - decks/
+        - docs/
+        - new crate / new project
+        - unsure
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      options:
+        - label: I agree to follow this project's [Code of Conduct](../../CODE_OF_CONDUCT.md).
+          required: true

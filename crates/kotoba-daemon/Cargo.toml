@@ -1,0 +1,24 @@
+[package]
+name = "kotoba-daemon"
+description = "Optional local HTTP / JSON-RPC API for Kotoba. Talks to kotoba-core; consumed by editor plugins, browser extensions, and the web dashboard."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+readme.workspace = true
+keywords.workspace = true
+categories.workspace = true
+publish = false
+
+[dependencies]
+kotoba-core = { workspace = true }
+
+anyhow = { workspace = true }
+axum = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+tower-http = { workspace = true }
+tracing = { workspace = true }

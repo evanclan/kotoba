@@ -1,0 +1,64 @@
+# Suggested label set. Apply with a tool like https://github.com/EndBug/label-sync.
+- name: bug
+  color: "d73a4a"
+  description: Something isn't working
+
+- name: enhancement
+  color: "a2eeef"
+  description: New feature or request
+
+- name: triage
+  color: "fbca04"
+  description: Needs maintainer review
+
+- name: good first issue
+  color: "7057ff"
+  description: Good for newcomers
+
+- name: help wanted
+  color: "008672"
+  description: Extra attention is needed
+
+- name: docs
+  color: "0075ca"
+  description: Documentation improvements
+
+- name: deck
+  color: "f9d0c4"
+  description: Community deck content
+
+- name: integration
+  color: "5319e7"
+  description: Editor / shell / browser / AI integration
+
+- name: question
+  color: "d876e3"
+  description: Further information is requested
+
+- name: discussion
+  color: "fef2c0"
+  description: Open-ended conversation
+
+- name: blocked
+  color: "b60205"
+  description: Cannot proceed without external action
+
+- name: needs-rfc
+  color: "1d76db"
+  description: Substantial change requiring an RFC
+
+- name: i18n
+  color: "c2e0c6"
+  description: Translations and locale support
+
+- name: a11y
+  color: "c2e0c6"
+  description: Accessibility
+
+- name: performance
+  color: "ededed"
+  description: Performance improvements
+
+- name: security
+  color: "ee0701"
+  description: Security-related

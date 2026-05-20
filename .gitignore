@@ -1,0 +1,44 @@
+# Rust
+target/
+**/*.rs.bk
+*.pdb
+Cargo.lock.bak
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local Kotoba data (in case the user runs the binary from inside the repo)
+.kotoba/
+*.kotoba.local
+
+# Logs & coverage
+*.log
+coverage/
+tarpaulin-report.html
+*.profraw
+
+# Generated docs
+docs/_build/
+site/
+
+# Node (for any web/extension subprojects later)
+node_modules/
+dist/
+build/
+.next/
+.turbo/
+
+# Python (for any auxiliary scripts)
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.local

@@ -1,0 +1,28 @@
+# Codeowners are automatically requested for review on PRs touching their paths.
+# Add yourself to the relevant section once you've taken on stewardship.
+
+# Default owners for everything
+*                         @your-org/maintainers
+
+# Core engine
+/crates/kotoba-core/      @your-org/core-maintainers
+
+# CLI & TUI
+/crates/kotoba-cli/       @your-org/cli-maintainers
+
+# Daemon & MCP
+/crates/kotoba-daemon/    @your-org/daemon-maintainers
+/crates/kotoba-mcp/       @your-org/ai-maintainers
+
+# Decks
+/decks/                   @your-org/deck-curators
+
+# Docs & website
+/docs/                    @your-org/docs-maintainers
+*.md                      @your-org/docs-maintainers
+
+# Shell integrations
+/shells/                  @your-org/integrations
+
+# CI & infra
+/.github/                 @your-org/maintainers

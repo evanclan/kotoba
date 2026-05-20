@@ -1,0 +1,51 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/kotoba-core",
+    "crates/kotoba-cli",
+    "crates/kotoba-daemon",
+    "crates/kotoba-mcp",
+]
+
+[workspace.package]
+version = "0.0.1"
+edition = "2021"
+rust-version = "1.78"
+license = "MIT"
+authors = ["Kotoba contributors"]
+repository = "https://github.com/your-org/kotoba"
+homepage = "https://kotoba.dev"
+readme = "README.md"
+keywords = ["language", "learning", "japanese", "srs", "cli"]
+categories = ["command-line-utilities", "text-processing"]
+
+[workspace.dependencies]
+anyhow = "1"
+chrono = { version = "0.4", features = ["serde"] }
+clap = { version = "4.5", features = ["derive", "env"] }
+directories = "5"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_yaml = "0.9"
+sha2 = "0.10"
+thiserror = "1"
+toml = "0.8"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# CLI / TUI
+ratatui = "0.28"
+crossterm = "0.28"
+
+# Daemon
+axum = "0.7"
+tokio = { version = "1", features = ["full"] }
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+
+# Internal crates
+kotoba-core = { path = "crates/kotoba-core", version = "0.0.1" }
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = "symbols"

@@ -1,0 +1,50 @@
+name: 🔌 Integration proposal
+description: Propose a new shell, editor, browser, or AI integration.
+title: "integration: <surface name>"
+labels: ["integration", "help wanted"]
+body:
+  - type: dropdown
+    id: surface
+    attributes:
+      label: What kind of integration?
+      options:
+        - Shell (zsh/fish/bash/nu/powershell)
+        - Status bar / prompt (Starship, Powerlevel10k, tmux, ...)
+        - Editor (VS Code, Neovim, Zed, Helix, Sublime, Emacs, ...)
+        - Browser extension (Chrome, Firefox, Safari, Arc)
+        - Launcher (Raycast, Alfred, Albert, wofi, ...)
+        - AI (MCP server, Ollama plugin, Claude Desktop, OpenAI tool-use)
+        - Mobile (iOS, Android)
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: target
+    attributes:
+      label: Specific target
+      placeholder: "VS Code 1.92+, fish 3.7+, etc."
+    validations:
+      required: true
+
+  - type: textarea
+    id: ux
+    attributes:
+      label: User experience
+      description: What does it feel like to use? Screenshots, ascii sketches, or step-by-step descriptions all welcome.
+    validations:
+      required: true
+
+  - type: textarea
+    id: api-needs
+    attributes:
+      label: What does it need from kotoba-core / kotoba-daemon?
+      description: List any missing core functionality. We'll factor needed APIs into core before plugin work begins.
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      options:
+        - label: I agree to follow this project's [Code of Conduct](../../CODE_OF_CONDUCT.md).
+          required: true

@@ -1,0 +1,63 @@
+name: 🗂️ Deck contribution
+description: Propose a new community deck or improve an existing one.
+title: "deck: <deck name>"
+labels: ["deck", "good first issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Decks are the heart of Kotoba's community. Thank you for contributing!
+        You don't need to know Rust to add a deck — just edit a markdown file.
+
+  - type: input
+    id: deck-name
+    attributes:
+      label: Deck name
+      placeholder: "JLPT N4 transitive/intransitive verb pairs"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: language-pair
+    attributes:
+      label: Language pair
+      options:
+        - Japanese ↔ English
+        - Japanese ↔ Other (specify in description)
+        - English ↔ Other (specify in description)
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: How many cards? What audience (beginner / N5 / N3 / business / etc.)?
+    validations:
+      required: true
+
+  - type: input
+    id: license
+    attributes:
+      label: License
+      description: Default is CC-BY-SA-4.0. State otherwise here.
+      value: "CC-BY-SA-4.0"
+
+  - type: textarea
+    id: source
+    attributes:
+      label: Source / attribution
+      description: Where do the cards come from (your own writing, a textbook, JMdict, etc.)?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Acknowledgement
+      options:
+        - label: I have read the [deck format guide](../../docs/data-format.md) and the [Code of Conduct](../../CODE_OF_CONDUCT.md).
+          required: true
+        - label: I confirm I have the right to publish this content under the chosen license.
+          required: true
