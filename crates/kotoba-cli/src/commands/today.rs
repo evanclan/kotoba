@@ -35,7 +35,10 @@ pub fn run(home: &Path, args: Args) -> Result<()> {
     let today = Utc::now();
     let day_of_year = today.ordinal() as usize;
     let card = &all_cards[day_of_year % all_cards.len()];
-    let due_count = all_cards.iter().filter(|c| c.state.next_due <= today).count();
+    let due_count = all_cards
+        .iter()
+        .filter(|c| c.state.next_due <= today)
+        .count();
 
     if args.json {
         let payload = serde_json::json!({
@@ -57,7 +60,11 @@ pub fn run(home: &Path, args: Args) -> Result<()> {
             _ => "日曜日",
         };
         let reading = card.reading.as_deref().unwrap_or("");
-        let gloss: &str = if card.back.is_empty() { "" } else { card.back.as_str() };
+        let gloss: &str = if card.back.is_empty() {
+            ""
+        } else {
+            card.back.as_str()
+        };
         let due_part = if due_count > 0 {
             format!("   {due_count} reviews due")
         } else {

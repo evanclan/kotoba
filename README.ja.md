@@ -78,7 +78,7 @@ $ kotoba review
 > **ステータス:** Kotoba は早期アルファ版です。以下は v0.0.1 リファレンス実装の手順です。
 
 ```bash
-git clone https://github.com/your-org/kotoba.git
+git clone https://github.com/evanclan/kotoba.git
 cd kotoba
 cargo build --release
 ./target/release/kotoba init

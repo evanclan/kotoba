@@ -14,12 +14,10 @@ pub fn demo_dictionary() -> InMemoryDictionary {
             pos: vec!["noun".to_string(), "suru-verb".to_string()],
             jlpt: Some("N3".to_string()),
             frequency_rank: Some(4212),
-            examples: vec![
-                DictionaryExample {
-                    native: "妹は来年留学します。".to_string(),
-                    gloss: "My younger sister will study abroad next year.".to_string(),
-                },
-            ],
+            examples: vec![DictionaryExample {
+                native: "妹は来年留学します。".to_string(),
+                gloss: "My younger sister will study abroad next year.".to_string(),
+            }],
         },
         DictionaryEntry {
             term: "食卓".to_string(),

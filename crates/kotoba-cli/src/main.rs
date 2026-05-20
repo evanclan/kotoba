@@ -26,7 +26,7 @@ mod store_fs;
     about = "Local-first, terminal-native, scriptable language learning.",
     long_about = "Kotoba — your personal language-learning context layer.\n\
                   Decks live in plain markdown you own. AI is optional, BYO model.\n\
-                  Docs: https://github.com/your-org/kotoba"
+                  Docs: https://github.com/evanclan/kotoba"
 )]
 struct Cli {
     /// Override the data directory (default: ~/.kotoba).
@@ -73,8 +73,8 @@ fn main() -> ExitCode {
 }
 
 fn run(cli: Cli) -> Result<()> {
-    let home = config::resolve_home(cli.home.as_deref())
-        .context("resolving Kotoba data directory")?;
+    let home =
+        config::resolve_home(cli.home.as_deref()).context("resolving Kotoba data directory")?;
 
     match cli.command {
         Command::Init(args) => commands::init::run(&home, args),
@@ -87,8 +87,7 @@ fn run(cli: Cli) -> Result<()> {
 
 fn init_logging(level: &str) -> Result<()> {
     use tracing_subscriber::EnvFilter;
-    let filter = EnvFilter::try_new(format!("kotoba={level}"))
-        .context("invalid log filter")?;
+    let filter = EnvFilter::try_new(format!("kotoba={level}")).context("invalid log filter")?;
     tracing_subscriber::fmt()
         .with_env_filter(filter)
         .with_target(false)

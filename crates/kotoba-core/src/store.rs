@@ -52,7 +52,13 @@ impl MemoryStore {
 
 impl Store for MemoryStore {
     fn list_decks(&self) -> Result<Vec<String>> {
-        Ok(self.decks.read().expect("poisoned lock").keys().cloned().collect())
+        Ok(self
+            .decks
+            .read()
+            .expect("poisoned lock")
+            .keys()
+            .cloned()
+            .collect())
     }
 
     fn load_deck(&self, slug: &str) -> Result<Deck> {
@@ -73,7 +79,10 @@ impl Store for MemoryStore {
     }
 
     fn append_review(&self, review: &Review) -> Result<()> {
-        self.reviews.write().expect("poisoned lock").push(review.clone());
+        self.reviews
+            .write()
+            .expect("poisoned lock")
+            .push(review.clone());
         Ok(())
     }
 
@@ -107,6 +116,9 @@ mod tests {
     #[test]
     fn missing_deck_errors() {
         let store = MemoryStore::new();
-        assert!(matches!(store.load_deck("nope"), Err(Error::DeckNotFound(_))));
+        assert!(matches!(
+            store.load_deck("nope"),
+            Err(Error::DeckNotFound(_))
+        ));
     }
 }

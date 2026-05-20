@@ -17,7 +17,10 @@ pub struct Deck {
 impl Deck {
     /// Create a new empty deck with the given metadata.
     pub fn new(meta: DeckMeta) -> Self {
-        Self { meta, cards: Vec::new() }
+        Self {
+            meta,
+            cards: Vec::new(),
+        }
     }
 
     /// Append a card to this deck.
@@ -44,7 +47,7 @@ pub struct DeckMeta {
     /// URL/ID-safe slug. Derived from the filename if absent in the source.
     pub slug: String,
     /// One-line description.
-    #[serde(default)]
+    #[serde(default, skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,
     /// Language being learned (BCP-47).
     pub language: String,
@@ -54,25 +57,25 @@ pub struct DeckMeta {
     #[serde(default = "default_license")]
     pub license: String,
     /// Contributors.
-    #[serde(default)]
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub authors: Vec<String>,
     /// Creation date.
-    #[serde(default)]
+    #[serde(default, skip_serializing_if = "Option::is_none")]
     pub created: Option<NaiveDate>,
     /// Last update.
-    #[serde(default)]
+    #[serde(default, skip_serializing_if = "Option::is_none")]
     pub updated: Option<NaiveDate>,
     /// Source attribution.
-    #[serde(default)]
+    #[serde(default, skip_serializing_if = "Option::is_none")]
     pub source: Option<String>,
     /// Audience description, e.g. "JLPT N5".
-    #[serde(default)]
+    #[serde(default, skip_serializing_if = "Option::is_none")]
     pub audience: Option<String>,
     /// Optional semver version of the deck.
-    #[serde(default)]
+    #[serde(default, skip_serializing_if = "Option::is_none")]
     pub version: Option<String>,
     /// Top-level tags applied to all cards.
-    #[serde(default)]
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub tags: Vec<String>,
 }
 

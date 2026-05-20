@@ -22,7 +22,7 @@ Do all of these before posting anywhere.
 - [ ] `cargo clippy --all-targets -- -D warnings` clean
 - [ ] CI passing on the default branch in GitHub Actions
 - [ ] `cargo run -p kotoba-cli -- init && lookup ありがとう && add 留学 && today` works on a fresh machine
-- [ ] Replace `your-org/kotoba` everywhere — `grep -r 'your-org' .`
+- [ ] Replace `evanclan/kotoba` everywhere — `grep -r 'evanclan' .`
 - [ ] Replace placeholder emails (`conduct@`, `security@`, `legal@`) with real ones or your handle
 - [ ] Tag the first release `v0.0.1` once happy with the demo
 

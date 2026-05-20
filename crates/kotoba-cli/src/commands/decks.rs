@@ -16,7 +16,12 @@ pub fn run(home: &Path) -> Result<()> {
     for slug in slugs {
         match store.load_deck(&slug) {
             Ok(deck) => {
-                println!("  {:24} {:>4} cards   {}", slug, deck.cards.len(), deck.meta.name);
+                println!(
+                    "  {:24} {:>4} cards   {}",
+                    slug,
+                    deck.cards.len(),
+                    deck.meta.name
+                );
             }
             Err(e) => {
                 println!("  {:24}   (failed to load: {})", slug, e);

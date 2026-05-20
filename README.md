@@ -18,7 +18,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/your-org/kotoba/actions"><img alt="CI" src="https://img.shields.io/badge/CI-pending-lightgrey"></a>
+  <a href="https://github.com/evanclan/kotoba/actions"><img alt="CI" src="https://img.shields.io/badge/CI-pending-lightgrey"></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
   <a href="docs/roadmap.md"><img alt="Status" src="https://img.shields.io/badge/status-alpha-orange"></a>
   <a href="CODE_OF_CONDUCT.md"><img alt="Contributor Covenant" src="https://img.shields.io/badge/Contributor%20Covenant-2.1-purple.svg"></a>
@@ -92,7 +92,7 @@ A 90-second daily review. That's the loop.
 ### Install (from source, alpha)
 
 ```bash
-git clone https://github.com/your-org/kotoba.git
+git clone https://github.com/evanclan/kotoba.git
 cd kotoba
 cargo build --release
 ./target/release/kotoba init
@@ -209,7 +209,7 @@ Kotoba is not trying to be a better Duolingo or a better WaniKani. It's the **su
 - 🔌 **Add a new language pair.** Korean, Mandarin, Spanish, Vietnamese — anything.
 - 🤖 **Wire up AI integrations.** MCP server, plugin templates for Ollama / Claude / OpenAI.
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide. Look for issues labeled [`good first issue`](https://github.com/your-org/kotoba/labels/good%20first%20issue).
+Read [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide. Look for issues labeled [`good first issue`](https://github.com/evanclan/kotoba/labels/good%20first%20issue).
 
 ---
 

@@ -4,9 +4,9 @@ Welcome! Whether you're here to fix a typo, curate a deck, build a VS Code plugi
 
 This guide explains **how** to contribute. For **what** to contribute, browse:
 
-- [Issues labeled `good first issue`](https://github.com/your-org/kotoba/labels/good%20first%20issue)
-- [Issues labeled `help wanted`](https://github.com/your-org/kotoba/labels/help%20wanted)
-- [Discussions](https://github.com/your-org/kotoba/discussions) for ideas and questions
+- [Issues labeled `good first issue`](https://github.com/evanclan/kotoba/labels/good%20first%20issue)
+- [Issues labeled `help wanted`](https://github.com/evanclan/kotoba/labels/help%20wanted)
+- [Discussions](https://github.com/evanclan/kotoba/discussions) for ideas and questions
 - The [Roadmap](docs/roadmap.md) for the bigger picture
 
 ---
@@ -89,7 +89,7 @@ The Rust core lives in [`crates/`](crates/). Core contributions include:
 - Sync backends (git, S3, WebDAV, iCloud, Dropbox)
 - AI integrations (MCP server, Ollama / Claude / OpenAI plugins)
 
-For non-trivial changes (>~100 lines or any change to a public API), please open an issue or [discussion](https://github.com/your-org/kotoba/discussions) first.
+For non-trivial changes (>~100 lines or any change to a public API), please open an issue or [discussion](https://github.com/evanclan/kotoba/discussions) first.
 
 ### 6. Help with infra & maintenance
 
@@ -112,7 +112,7 @@ For non-trivial changes (>~100 lines or any change to a public API), please open
 ### Clone and build
 
 ```bash
-git clone https://github.com/your-org/kotoba.git
+git clone https://github.com/evanclan/kotoba.git
 cd kotoba
 cargo build              # builds all crates in debug mode
 cargo test               # runs the test suite
@@ -240,7 +240,7 @@ If you've contributed substantively over time and want to become a maintainer, o
 
 ## Recognition
 
-- Every contributor's GitHub handle is automatically added to the [Contributors](https://github.com/your-org/kotoba/graphs/contributors) page.
+- Every contributor's GitHub handle is automatically added to the [Contributors](https://github.com/evanclan/kotoba/graphs/contributors) page.
 - Notable contributions are called out in release notes.
 - Deck curators are credited inside the deck file's `authors:` field, forever.
 - Translators are credited in the corresponding `README.<lang>.md` and locale files.
@@ -251,7 +251,7 @@ You don't have to be loud to be appreciated here. We see you.
 
 ## Questions?
 
-- Open a [Discussion](https://github.com/your-org/kotoba/discussions).
+- Open a [Discussion](https://github.com/evanclan/kotoba/discussions).
 - File an issue with the `question` label.
 - Ping a maintainer in a thread — we'd rather answer twice than not at all.
 

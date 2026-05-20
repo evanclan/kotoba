@@ -2,27 +2,27 @@
 # Add yourself to the relevant section once you've taken on stewardship.
 
 # Default owners for everything
-*                         @your-org/maintainers
+*                         @evanclan/maintainers
 
 # Core engine
-/crates/kotoba-core/      @your-org/core-maintainers
+/crates/kotoba-core/      @evanclan/core-maintainers
 
 # CLI & TUI
-/crates/kotoba-cli/       @your-org/cli-maintainers
+/crates/kotoba-cli/       @evanclan/cli-maintainers
 
 # Daemon & MCP
-/crates/kotoba-daemon/    @your-org/daemon-maintainers
-/crates/kotoba-mcp/       @your-org/ai-maintainers
+/crates/kotoba-daemon/    @evanclan/daemon-maintainers
+/crates/kotoba-mcp/       @evanclan/ai-maintainers
 
 # Decks
-/decks/                   @your-org/deck-curators
+/decks/                   @evanclan/deck-curators
 
 # Docs & website
-/docs/                    @your-org/docs-maintainers
-*.md                      @your-org/docs-maintainers
+/docs/                    @evanclan/docs-maintainers
+*.md                      @evanclan/docs-maintainers
 
 # Shell integrations
-/shells/                  @your-org/integrations
+/shells/                  @evanclan/integrations
 
 # CI & infra
-/.github/                 @your-org/maintainers
+/.github/                 @evanclan/maintainers

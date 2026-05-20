@@ -89,8 +89,11 @@ impl Scheduler for Fsrs {
         let new_difficulty = Self::update_difficulty(state.difficulty, grade);
         let new_stability = Self::update_stability(state.stability, new_difficulty, grade);
 
-        // Map target retention to an interval scaled by stability.
-        let interval_days = (new_stability * (-self.retention.ln()).abs()).max(0.5);
+        // FSRS convention: at the canonical 0.9 retention target, interval = stability.
+        // For other targets, scale by ln(target) / ln(0.9). Stricter retention
+        // shrinks the interval; more relaxed retention grows it.
+        let canonical_ln = 0.9_f64.ln();
+        let interval_days = (new_stability * (self.retention.ln() / canonical_ln)).max(0.5);
 
         state.difficulty = new_difficulty;
         state.stability = new_stability;
@@ -103,7 +106,10 @@ impl Scheduler for Fsrs {
             state.reps += 1;
         }
 
-        ScheduleResult { state, interval_days }
+        ScheduleResult {
+            state,
+            interval_days,
+        }
     }
 }
 
@@ -138,8 +144,12 @@ mod tests {
     fn easy_pushes_further_than_good() {
         let card = fresh_card();
         let now = Utc::now();
-        let easy = Fsrs::default().schedule(&card, Grade::Easy, now).interval_days;
-        let good = Fsrs::default().schedule(&card, Grade::Good, now).interval_days;
+        let easy = Fsrs::default()
+            .schedule(&card, Grade::Easy, now)
+            .interval_days;
+        let good = Fsrs::default()
+            .schedule(&card, Grade::Good, now)
+            .interval_days;
         assert!(easy > good, "easy ({easy}) should exceed good ({good})");
     }
 

@@ -65,7 +65,9 @@ impl InMemoryDictionary {
 
     /// Build from a static list of entries.
     pub fn with_entries<I: IntoIterator<Item = DictionaryEntry>>(entries: I) -> Self {
-        Self { entries: entries.into_iter().collect() }
+        Self {
+            entries: entries.into_iter().collect(),
+        }
     }
 }
 

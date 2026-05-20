@@ -34,7 +34,10 @@ impl FsStore {
     fn reviews_path(&self, ts: chrono::DateTime<chrono::Utc>) -> PathBuf {
         let year = ts.format("%Y").to_string();
         let month = ts.format("%m").to_string();
-        self.home.join("reviews").join(year).join(format!("{month}.jsonl"))
+        self.home
+            .join("reviews")
+            .join(year)
+            .join(format!("{month}.jsonl"))
     }
 }
 
@@ -96,8 +99,7 @@ impl Store for FsStore {
             .create(true)
             .open(&path)
             .map_err(|e| Error::Store(format!("opening {}: {e}", path.display())))?;
-        writeln!(f, "{line}")
-            .map_err(|e| Error::Store(format!("writing review: {e}")))?;
+        writeln!(f, "{line}").map_err(|e| Error::Store(format!("writing review: {e}")))?;
         Ok(())
     }
 

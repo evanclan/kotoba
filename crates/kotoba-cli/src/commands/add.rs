@@ -49,7 +49,9 @@ pub fn run(home: &Path, args: Args) -> Result<()> {
             .map(|e| e.meanings.join("; "))
             .unwrap_or_default()
     });
-    let reading = args.reading.or_else(|| dict_first.and_then(|e| e.reading.clone()));
+    let reading = args
+        .reading
+        .or_else(|| dict_first.and_then(|e| e.reading.clone()));
 
     let mut card = Card::new(&args.deck, &args.term).with_back(back);
     if let Some(r) = reading {

@@ -23,7 +23,11 @@ impl Engine {
         dictionary: Arc<dyn Dictionary>,
         scheduler: Arc<dyn Scheduler>,
     ) -> Self {
-        Self { store, dictionary, scheduler }
+        Self {
+            store,
+            dictionary,
+            scheduler,
+        }
     }
 
     /// Look up a term in the configured dictionary.
@@ -66,7 +70,7 @@ impl Engine {
                 break;
             }
         }
-        due.sort_by(|a, b| a.state.next_due.cmp(&b.state.next_due));
+        due.sort_by_key(|c| c.state.next_due);
         Ok(due)
     }
 
@@ -113,7 +117,11 @@ mod tests {
         let mut deck = Deck::new(DeckMeta::minimal("Personal", "personal"));
         deck.push(Card::new("personal", "留学"));
         store.save_deck(&deck).unwrap();
-        Engine::new(store, Arc::new(InMemoryDictionary::new()), Arc::new(Fsrs::default()))
+        Engine::new(
+            store,
+            Arc::new(InMemoryDictionary::new()),
+            Arc::new(Fsrs::default()),
+        )
     }
 
     #[test]

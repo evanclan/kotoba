@@ -16,4 +16,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Starter decks: `decks/starter`, `decks/jlpt-n5` (skeleton).
 - GitHub issue & PR templates, CI workflow scaffolding.
 
-[Unreleased]: https://github.com/your-org/kotoba/compare/HEAD
+[Unreleased]: https://github.com/evanclan/kotoba/compare/HEAD

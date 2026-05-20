@@ -40,4 +40,4 @@ Kotoba is a **local-first, terminal-native, scriptable language-learning toolkit
 
 ## When in doubt
 
-Open a [Discussion](https://github.com/your-org/kotoba/discussions) describing the change you'd like to make and why. AI assistants should treat unanswered ambiguity as a signal to stop and ask.
+Open a [Discussion](https://github.com/evanclan/kotoba/discussions) describing the change you'd like to make and why. AI assistants should treat unanswered ambiguity as a signal to stop and ask.

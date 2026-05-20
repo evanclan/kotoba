@@ -4,7 +4,7 @@
 # Real install will live at https://kotoba.dev/install.sh once releases ship.
 # For now, build from source:
 #
-#   git clone https://github.com/your-org/kotoba.git
+#   git clone https://github.com/evanclan/kotoba.git
 #   cd kotoba
 #   cargo install --path crates/kotoba-cli
 #
@@ -14,7 +14,7 @@ set -euo pipefail
 cat <<'EOF'
 Kotoba is in early alpha. To install from source:
 
-  git clone https://github.com/your-org/kotoba.git
+  git clone https://github.com/evanclan/kotoba.git
   cd kotoba
   cargo install --path crates/kotoba-cli
 
